@@ -8,3 +8,15 @@ date and name
 
 2017/10/03 Alex
 1. when the game ends display a message box that asks to play again, quit, or check high scores board
+
+
+
+
+
+
+2017/10/04 Derek
+1. Worked on the layout for the multiple windows, and gathered free resources(sfx, graphics)
+2. 	-Start coding basic gameplay elements
+	-add 6 user stories, and break them down
+3. Going to need help on the final layout design, as well as how to deal with multiplayer
+

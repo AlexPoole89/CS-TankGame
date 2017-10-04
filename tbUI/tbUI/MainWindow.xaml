@@ -1,0 +1,152 @@
+﻿<Window x:Class="tbUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tbUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="591" Width="710" WindowState="Maximized">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0">
+
+            <Canvas.Background>
+                <ImageBrush ImageSource="TankGameBG.png"/>
+            </Canvas.Background>
+            <Rectangle x:Name="rectGround" Height="43" Canvas.Top="378" Width="702">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Ground.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Label x:Name="lblTimer" Content="0:00" Canvas.Left="335" Canvas.Top="10" Foreground="White"/>
+            <Rectangle x:Name="rectP1hp_1" Height="34" Canvas.Left="18" Canvas.Top="6" Width="8" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="20"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="#FF4F0000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="rectP1hp_2" Height="20" Canvas.Left="34" Canvas.Top="20" Width="8" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="20"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="#FF4F0000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="rectP1hp_3" Height="20" Canvas.Left="47" Canvas.Top="20" Width="8" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="20"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="#FF4F0000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Label x:Name="lblPlayer1Name" Content="Player1" Canvas.Left="19" Canvas.Top="33" Foreground="White" Height="27"/>
+            <Rectangle x:Name="rectP2hp_1" Height="34" Canvas.Left="643" Canvas.Top="6" Width="8" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="20"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="#FF4F0000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="rectP2hp_2" Height="20" Canvas.Left="659" Canvas.Top="20" Width="8" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="20"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="#FF4F0000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="rectP2hp_3" Height="20" Canvas.Left="672" Canvas.Top="20" Width="8" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="20"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="#FF4F0000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Label x:Name="lblPlayer2Name" Content="Player2" Canvas.Left="644" Canvas.Top="33" Foreground="White" Height="27"/>
+
+        </Canvas>
+        <Grid Grid.Row="1" Background="#FF3C3A38">
+            <ListView HorizontalAlignment="Left" Height="92" Margin="10,10,0,0" VerticalAlignment="Top" Width="188">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,107,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="188"/>
+            <Button Content="Enter" HorizontalAlignment="Left" Margin="203,107,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button Content="Rankings" HorizontalAlignment="Left" Margin="617,10,0,0" VerticalAlignment="Top" Width="75" Height="28"/>
+            <Button Content="Leave" HorizontalAlignment="Left" Margin="617,43,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
+            <Label x:Name="lblAngle" Content="Angle" HorizontalAlignment="Left" Margin="216,12,0,0" VerticalAlignment="Top" Foreground="#FFFFE800" FontFamily="Franklin Gothic Demi" BorderThickness="0,2,0,0"/>
+            <Label x:Name="lblPower" Content="Power" HorizontalAlignment="Left" Margin="216,40,0,0" VerticalAlignment="Top" Foreground="#FFFFE800" RenderTransformOrigin="-1.635,0.628"/>
+            <Label x:Name="lblWind" Content="Wind" HorizontalAlignment="Left" Margin="216,64,0,0" VerticalAlignment="Top" Foreground="#FFFFE800"/>
+            <TextBlock HorizontalAlignment="Left" Margin="262,12,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="White" Width="55" Height="18"/>
+            <TextBlock HorizontalAlignment="Left" Margin="262,40,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="White" Width="55" Height="18"/>
+            <TextBlock HorizontalAlignment="Left" Margin="262,64,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="White" Width="55" Height="18"/>
+            <Label Content="Players waiting... 5" HorizontalAlignment="Left" Margin="596,114,0,0" VerticalAlignment="Top" Background="{x:Null}" OpacityMask="White" Foreground="White"/>
+            <Button Content="Leave" HorizontalAlignment="Left" Margin="617,79,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
+            <Label Content="GameState" HorizontalAlignment="Left" Margin="405,10,0,0" VerticalAlignment="Top" Width="119" FontFamily="Franklin Gothic Demi" FontSize="22" Background="#FF252525" Foreground="White"/>
+            <!--UI Buttons -->
+
+        </Grid>
+    </Grid>
+</Window>

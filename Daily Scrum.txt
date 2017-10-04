@@ -7,6 +7,7 @@ date and name
 3. Where do I need help from my teammate, teacher, or internet?
 
 2017/10/03 Alex
+<<<<<<< HEAD
 1. when the game ends display a message box that asks to play again, quit, or check high scores board
 
 
@@ -20,3 +21,15 @@ date and name
 	-add 6 user stories, and break them down
 3. Going to need help on the final layout design, as well as how to deal with multiplayer
 
+=======
+- when the game ends display a message box that asks to play again, quit, or check high scores board
+- WAITING FOR OTHER PLAYER message across screen at beginning
+
+2017/10/04 Alex
+1. Designed state machine. updated database tables and project proposal.
+2. Connect WPF page to Azure database. Create at least 6 user stories.  
+3. How to connect two instances of the game together
+
+
+
+>>>>>>> 366a28ffbe896a63b93f0eb540614d08c78904f8

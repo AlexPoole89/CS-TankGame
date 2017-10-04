@@ -7,4 +7,4 @@ date and name
 3. Where do I need help from my teammate, teacher, or internet?
 
 2017/10/03 Alex
-1. 
+1. when the game ends display a message box that asks to play again, quit, or check high scores board

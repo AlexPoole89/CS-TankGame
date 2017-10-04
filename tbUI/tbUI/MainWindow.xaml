@@ -5,11 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tbUI"
         mc:Ignorable="d"
-<<<<<<< HEAD
         Title="Tank Busters" Height="1039.204" Width="1394.285" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-=======
-        Title="MainWindow" Height="728.952" Width="1072.125" WindowState="Maximized">
->>>>>>> *login page
+
+
 
 
     <Grid>
@@ -19,14 +17,12 @@
         </Grid.RowDefinitions>
         <Canvas Grid.Row="0" Margin="0,0,0,233" Grid.RowSpan="2">
 
+
             <Canvas.Background>
                 <ImageBrush ImageSource="TankGameBG.png"/>
             </Canvas.Background>
-<<<<<<< HEAD
+            <Image Height="253" Canvas.Left="399" Canvas.Top="445" Width="598" Source="Mountain.png" Stretch="Fill"/>
             <Rectangle x:Name="rectGround" Height="79" Canvas.Top="698" Width="1388">
-=======
-            <Rectangle x:Name="rectGround" Height="43" Canvas.Top="481" Width="1064">
->>>>>>> *login page
                 <Rectangle.Fill>
                     <ImageBrush ImageSource="Ground.png"/>
                 </Rectangle.Fill>
@@ -130,12 +126,34 @@
             </Rectangle>
             <Label x:Name="lblPlayer2Name" Content="Player2" Canvas.Left="1274" Canvas.Top="89" Foreground="White" Height="35" Width="93" FontSize="18" FontFamily="Franklin Gothic Demi"/>
             <TextBlock x:Name="txtGameStatus" Canvas.Left="303" TextWrapping="Wrap" Text="Waiting for other player..." Canvas.Top="357" Height="111" Width="828" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Medium" FontSize="72"/>
+            <Rectangle x:Name="rectCollider1" Height="40" Canvas.Left="373" Canvas.Top="570" Width="383" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-40.534"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="rectCollider2" Height="40" Canvas.Left="639" Canvas.Top="570" Width="383" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-138.518"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
 
         </Canvas>
-<<<<<<< HEAD
         <Grid Grid.Row="1" Background="#FF3C3A38" Margin="0,24,0,0">
 
+
             <Rectangle HorizontalAlignment="Left" Height="208" Margin="676,10,0,0" VerticalAlignment="Top" Width="262" Fill="#FF595959"/>
+
 
             <ListView HorizontalAlignment="Left" Height="172" Margin="10,10,0,0" VerticalAlignment="Top" Width="470" Background="#FF635A4E" Foreground="White">
                 <ListViewItem Content="Player 1: Hi!" Margin="0" FontFamily="Franklin Gothic Book" Foreground="White"/>
@@ -166,40 +184,10 @@
                     <DropShadowEffect BlurRadius="8" Opacity="0.5" ShadowDepth="2"/>
                 </Button.Effect>
             </Button>
-=======
-        <Grid Grid.Row="1" Background="#FF3C3A38" Margin="-3,3,3,-3">
-            <ListView HorizontalAlignment="Left" Height="92" Margin="10,10,0,0" VerticalAlignment="Top" Width="188">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,107,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="188"/>
-            <Button Content="Enter" HorizontalAlignment="Left" Margin="203,107,0,0" VerticalAlignment="Top" Width="75"/>
-            <Label x:Name="lblAngle" Content="Angle" HorizontalAlignment="Left" Margin="216,12,0,0" VerticalAlignment="Top" Foreground="#FFFFE800" FontFamily="Franklin Gothic Demi" BorderThickness="0,2,0,0"/>
-            <Label x:Name="lblPower" Content="Power" HorizontalAlignment="Left" Margin="216,40,0,0" VerticalAlignment="Top" Foreground="#FFFFE800" RenderTransformOrigin="-1.635,0.628"/>
-            <Label x:Name="lblWind" Content="Wind" HorizontalAlignment="Left" Margin="216,64,0,0" VerticalAlignment="Top" Foreground="#FFFFE800"/>
-            <TextBlock HorizontalAlignment="Left" Margin="262,12,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="White" Width="55" Height="18"/>
-            <TextBlock HorizontalAlignment="Left" Margin="262,40,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="White" Width="55" Height="18"/>
-            <TextBlock HorizontalAlignment="Left" Margin="262,64,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Background="White" Width="55" Height="18"/>
-            <Label Content="GameState" HorizontalAlignment="Left" Margin="405,10,0,0" VerticalAlignment="Top" Width="119" FontFamily="Franklin Gothic Demi" FontSize="22" Background="#FF252525" Foreground="White"/>
->>>>>>> *login page
             <!--UI Buttons -->
 
+
         </Grid>
-        <Button Content="Rankings" HorizontalAlignment="Left" Margin="959,24,0,0" VerticalAlignment="Top" Width="75" Height="28" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-2.991"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-0.732"/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button Content="Leave" HorizontalAlignment="Left" Margin="959,57,0,0" VerticalAlignment="Top" Width="75" Height="30" Grid.Row="1"/>
-        <Label Content="Players waiting... 5" HorizontalAlignment="Left" Margin="938,128,0,0" VerticalAlignment="Top" Background="{x:Null}" OpacityMask="White" Foreground="White" Grid.Row="1"/>
-        <Button Content="Leave" HorizontalAlignment="Left" Margin="959,93,0,0" VerticalAlignment="Top" Width="75" Height="30" Grid.Row="1"/>
     </Grid>
 </Window>
+ 

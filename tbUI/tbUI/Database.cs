@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 namespace tbUI
 {
     class Database
-    {
-        static String connString ="TODO: ADD CONNECTION STRING";
+    {   //TODO: ADD CONNECTION STRING
+        static String connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\\jacstudents\students\1795647\TankDB.mdf;Integrated Security=True;Connect Timeout=30";
         SqlConnection conn;
 
         //open connection string

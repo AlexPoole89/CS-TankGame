@@ -23,5 +23,29 @@ namespace tbUI
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Database db = new Database();
+
+            string playername = tbUserLogin.Text;
+
+            db.ExecuteQueries("SELECT Username FROM Users WHERE Username = @Username");
+
+            if (playername.Equals("@Username"))
+            {
+                db.ExecuteQueries("SELECT Username FROM Users WHERE Username = @Username");
+            }
+            else
+            //create new user
+            {
+                db.ExecuteQueries("INSERT INTO Users ");
+            }
+           
+            //TODO: if username exists, select user
+            // if username doesn't exist, insert new user
+
+            
+        }
     }
 }

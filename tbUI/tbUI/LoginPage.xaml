@@ -9,7 +9,7 @@
     <Grid Background="#FF3C3A38">
         <Label Content="Username:" HorizontalAlignment="Left" Margin="32,23,0,0" VerticalAlignment="Top" Width="73" Background="#FF3C3A38" Foreground="White"/>
         <TextBox x:Name="tbUserLogin" HorizontalAlignment="Left" Height="23" Margin="110,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFC9C3C3"/>
-        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="101,71,0,0" VerticalAlignment="Top" Width="75" Background="#FF224F28" Foreground="White" BorderBrush="Black"/>
+        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="101,71,0,0" VerticalAlignment="Top" Width="75" Background="#FF224F28" Foreground="White" BorderBrush="Black" Click="btnLogin_Click"/>
 
     </Grid>
 </Window>

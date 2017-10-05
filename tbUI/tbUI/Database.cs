@@ -9,7 +9,7 @@ namespace tbUI
 {
     class Database
     {   //TODO: ADD CONNECTION STRING
-        static String connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\\jacstudents\students\1795647\TankDB.mdf;Integrated Security=True;Connect Timeout=30";
+        static String connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\namel\OneDrive\Documents\TankDB.mdf;Integrated Security=True;Connect Timeout=30";
         SqlConnection conn;
 
         //open connection string
@@ -26,7 +26,6 @@ namespace tbUI
             try
             {
                 SqlCommand cmd = new SqlCommand(Query_, conn);
-               // cmd.Parameters.Add(new SqlParameter("Name", conn));
                 cmd.ExecuteNonQuery();
             }
             catch (SqlException ex)
@@ -36,7 +35,22 @@ namespace tbUI
         }
         //TODO: INSERT, SELECT STATEMENTS 
 
+        public void AddUser(User u)
+        {
+            try {
+                SqlCommand insertcmd = new SqlCommand("INSERT INTO Users (Username) VALUES (@Username)", conn);
+                insertcmd.Parameters.Add(new SqlParameter("@Username", u.Username));
+                insertcmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                Console.Write("EXCEPTION: " + ex.Message);
+            }
 
+        }
+
+        //create method for highscore board. 
+        //SELECT Username, wins, losses, gamesPlayed FROM Users ORDER BY wins DESC
 
         //method to read data. datareader
         public SqlDataReader DataReader(string Query_)

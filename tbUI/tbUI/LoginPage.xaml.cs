@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,33 +20,45 @@ namespace tbUI
     /// </summary>
     public partial class LoginPage : Window
     {
+        Database db = new Database();
+
         public LoginPage()
         {
+            db.OpenConnection();
             InitializeComponent();
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Database db = new Database();
+            User player = new User();
 
             string playername = tbUserLogin.Text;
 
-            db.ExecuteQueries("SELECT Username FROM Users WHERE Username = @Username");
-
-            if (playername.Equals("@Username"))
+            if (Regex.IsMatch(playername, "^[a-zA-Z0-9]+$"))
             {
-                db.ExecuteQueries("SELECT Username FROM Users WHERE Username = @Username");
+                //  db.ExecuteQueries("SELECT Username FROM Users WHERE Username = @Username");
+                if (playername.Length < 3 || playername.Length > 15)
+                {
+                    MessageBox.Show("Username must be between 3 and 15 characters long.", "Username Entry Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
+                else
+                {
+                   player.Username = playername;
+                    db.AddUser(player);                  
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Close();
+                }
             }
             else
-            //create new user
             {
-                db.ExecuteQueries("INSERT INTO Users ");
+                MessageBox.Show("Username must be in letters and number with no spaces","Username Entry Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
-           
+
             //TODO: if username exists, select user
             // if username doesn't exist, insert new user
 
-            
+
         }
     }
 }

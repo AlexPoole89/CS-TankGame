@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tbUI"
         mc:Ignorable="d"
-        Title="Tank Busters" Height="1039.204" Width="1394.285" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Tank Busters" Height="1039.204" Width="1394.285" ResizeMode="NoResize" WindowStartupLocation="Manual">
 
 
 

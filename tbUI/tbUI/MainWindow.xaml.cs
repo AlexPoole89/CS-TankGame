@@ -22,7 +22,11 @@ namespace tbUI
     {
         public MainWindow()
         {
+           
             InitializeComponent();
+            this.Hide();
+            LoginPage login = new LoginPage();
+            login.Show();
         }
     }
 }
